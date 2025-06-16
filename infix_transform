@@ -1,0 +1,762 @@
+#pragma once
+
+namespace infixtransform {
+
+	using namespace System;
+	using namespace System::ComponentModel;
+	using namespace System::Collections;
+	using namespace System::Windows::Forms;
+	using namespace System::Data;
+	using namespace System::Drawing;
+
+	/// <summary>
+	/// MyForm 的摘要
+	/// </summary>
+	public ref class MyForm : public System::Windows::Forms::Form
+	{
+	public:
+		MyForm(void)
+		{
+			InitializeComponent();
+			//
+			//TODO:  在此加入建構函式程式碼
+			//
+		}
+
+	protected:
+		/// <summary>
+		/// 清除任何使用中的資源。
+		/// </summary>
+		~MyForm()
+		{
+			if (components)
+			{
+				delete components;
+			}
+		}
+
+	protected:
+	private: System::Windows::Forms::TabPage^ tabPage1;
+	private: System::Windows::Forms::Button^ button2;
+	private: System::Windows::Forms::Button^ button1;
+	private: System::Windows::Forms::TabPage^ tabPage2;
+	private: System::Windows::Forms::TabPage^ tabPage3;
+
+
+	private: System::Windows::Forms::TextBox^ textBox1;
+	private: System::Windows::Forms::CheckBox^ checkBox1;
+	private: System::Windows::Forms::CheckBox^ checkBox2;
+	private: System::Windows::Forms::RichTextBox^ richTextBox3;
+	private: System::Windows::Forms::TabControl^ tabControl1;
+	private: System::Windows::Forms::TextBox^ textBox3;
+	private: System::Windows::Forms::TextBox^ textBox2;
+	private: System::Windows::Forms::Button^ button4;
+	private: System::Windows::Forms::Button^ button3;
+	private: System::Windows::Forms::TextBox^ textBox6;
+	private: System::Windows::Forms::TextBox^ textBox5;
+	private: System::Windows::Forms::TextBox^ textBox4;
+	private: System::Windows::Forms::TextBox^ textBox9;
+	private: System::Windows::Forms::TextBox^ textBox8;
+	private: System::Windows::Forms::TextBox^ textBox7;
+	private: System::Windows::Forms::Button^ button6;
+	private: System::Windows::Forms::Button^ button5;
+
+	private:
+		/// <summary>
+		/// 設計工具所需的變數。
+		/// </summary>
+		System::ComponentModel::Container ^components;
+
+#pragma region Windows Form Designer generated code
+		/// <summary>
+		/// 此為設計工具支援所需的方法 - 請勿使用程式碼編輯器修改
+		/// 這個方法的內容。
+		/// </summary>
+		void InitializeComponent(void)
+		{
+            this->tabControl1 = (gcnew System::Windows::Forms::TabControl());
+            this->tabPage1 = (gcnew System::Windows::Forms::TabPage());
+            this->textBox3 = (gcnew System::Windows::Forms::TextBox());
+            this->textBox2 = (gcnew System::Windows::Forms::TextBox());
+            this->textBox1 = (gcnew System::Windows::Forms::TextBox());
+            this->button2 = (gcnew System::Windows::Forms::Button());
+            this->button1 = (gcnew System::Windows::Forms::Button());
+            this->tabPage2 = (gcnew System::Windows::Forms::TabPage());
+            this->button4 = (gcnew System::Windows::Forms::Button());
+            this->button3 = (gcnew System::Windows::Forms::Button());
+            this->textBox6 = (gcnew System::Windows::Forms::TextBox());
+            this->textBox5 = (gcnew System::Windows::Forms::TextBox());
+            this->textBox4 = (gcnew System::Windows::Forms::TextBox());
+            this->tabPage3 = (gcnew System::Windows::Forms::TabPage());
+            this->textBox9 = (gcnew System::Windows::Forms::TextBox());
+            this->textBox8 = (gcnew System::Windows::Forms::TextBox());
+            this->textBox7 = (gcnew System::Windows::Forms::TextBox());
+            this->button6 = (gcnew System::Windows::Forms::Button());
+            this->button5 = (gcnew System::Windows::Forms::Button());
+            this->checkBox1 = (gcnew System::Windows::Forms::CheckBox());
+            this->checkBox2 = (gcnew System::Windows::Forms::CheckBox());
+            this->richTextBox3 = (gcnew System::Windows::Forms::RichTextBox());
+            this->tabControl1->SuspendLayout();
+            this->tabPage1->SuspendLayout();
+            this->tabPage2->SuspendLayout();
+            this->tabPage3->SuspendLayout();
+            this->SuspendLayout();
+            // 
+            // tabControl1
+            // 
+            this->tabControl1->Controls->Add(this->tabPage1);
+            this->tabControl1->Controls->Add(this->tabPage2);
+            this->tabControl1->Controls->Add(this->tabPage3);
+            this->tabControl1->Location = System::Drawing::Point(12, 18);
+            this->tabControl1->Name = L"tabControl1";
+            this->tabControl1->SelectedIndex = 0;
+            this->tabControl1->Size = System::Drawing::Size(809, 203);
+            this->tabControl1->TabIndex = 0;
+            // 
+            // tabPage1
+            // 
+            this->tabPage1->BackColor = System::Drawing::Color::Lavender;
+            this->tabPage1->Controls->Add(this->textBox3);
+            this->tabPage1->Controls->Add(this->textBox2);
+            this->tabPage1->Controls->Add(this->textBox1);
+            this->tabPage1->Controls->Add(this->button2);
+            this->tabPage1->Controls->Add(this->button1);
+            this->tabPage1->ForeColor = System::Drawing::SystemColors::ControlText;
+            this->tabPage1->Location = System::Drawing::Point(4, 28);
+            this->tabPage1->Name = L"tabPage1";
+            this->tabPage1->Padding = System::Windows::Forms::Padding(3);
+            this->tabPage1->Size = System::Drawing::Size(801, 171);
+            this->tabPage1->TabIndex = 0;
+            this->tabPage1->Text = L"InFix";
+            // 
+            // textBox3
+            // 
+            this->textBox3->Location = System::Drawing::Point(176, 120);
+            this->textBox3->Name = L"textBox3";
+            this->textBox3->ReadOnly = true;
+            this->textBox3->Size = System::Drawing::Size(482, 29);
+            this->textBox3->TabIndex = 4;
+            // 
+            // textBox2
+            // 
+            this->textBox2->Location = System::Drawing::Point(176, 74);
+            this->textBox2->Name = L"textBox2";
+            this->textBox2->ReadOnly = true;
+            this->textBox2->Size = System::Drawing::Size(482, 29);
+            this->textBox2->TabIndex = 3;
+            // 
+            // textBox1
+            // 
+            this->textBox1->Location = System::Drawing::Point(176, 26);
+            this->textBox1->Name = L"textBox1";
+            this->textBox1->Size = System::Drawing::Size(482, 29);
+            this->textBox1->TabIndex = 2;
+            this->textBox1->Text = L"A ^ B * C - D + E / (F + G)";
+            // 
+            // button2
+            // 
+            this->button2->BackColor = System::Drawing::Color::SteelBlue;
+            this->button2->ForeColor = System::Drawing::SystemColors::ButtonHighlight;
+            this->button2->Location = System::Drawing::Point(29, 111);
+            this->button2->Name = L"button2";
+            this->button2->Size = System::Drawing::Size(141, 43);
+            this->button2->TabIndex = 1;
+            this->button2->Text = L"Infix => Postfix";
+            this->button2->UseVisualStyleBackColor = false;
+            // 
+            // button1
+            // 
+            this->button1->BackColor = System::Drawing::Color::SteelBlue;
+            this->button1->Font = (gcnew System::Drawing::Font(L"新細明體", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(136)));
+            this->button1->ForeColor = System::Drawing::Color::Transparent;
+            this->button1->Location = System::Drawing::Point(29, 67);
+            this->button1->Name = L"button1";
+            this->button1->Size = System::Drawing::Size(141, 38);
+            this->button1->TabIndex = 0;
+            this->button1->Text = L"Infix => Prefix";
+            this->button1->UseVisualStyleBackColor = false;
+            // 
+            // tabPage2
+            // 
+            this->tabPage2->BackColor = System::Drawing::Color::Pink;
+            this->tabPage2->Controls->Add(this->button4);
+            this->tabPage2->Controls->Add(this->button3);
+            this->tabPage2->Controls->Add(this->textBox6);
+            this->tabPage2->Controls->Add(this->textBox5);
+            this->tabPage2->Controls->Add(this->textBox4);
+            this->tabPage2->Location = System::Drawing::Point(4, 28);
+            this->tabPage2->Name = L"tabPage2";
+            this->tabPage2->Padding = System::Windows::Forms::Padding(3);
+            this->tabPage2->Size = System::Drawing::Size(801, 171);
+            this->tabPage2->TabIndex = 1;
+            this->tabPage2->Text = L"PreFix";
+            // 
+            // button4
+            // 
+            this->button4->Location = System::Drawing::Point(16, 111);
+            this->button4->Name = L"button4";
+            this->button4->Size = System::Drawing::Size(136, 34);
+            this->button4->TabIndex = 4;
+            this->button4->Text = L"Prefix => Postfix";
+            this->button4->UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this->button3->Location = System::Drawing::Point(16, 59);
+            this->button3->Name = L"button3";
+            this->button3->Size = System::Drawing::Size(136, 34);
+            this->button3->TabIndex = 3;
+            this->button3->Text = L"Prefix => Infix";
+            this->button3->UseVisualStyleBackColor = true;
+            // 
+            // textBox6
+            // 
+            this->textBox6->Location = System::Drawing::Point(165, 116);
+            this->textBox6->Name = L"textBox6";
+            this->textBox6->Size = System::Drawing::Size(544, 29);
+            this->textBox6->TabIndex = 2;
+            this->textBox6->TextChanged += gcnew System::EventHandler(this, &MyForm::textBox6_TextChanged);
+            // 
+            // textBox5
+            // 
+            this->textBox5->Location = System::Drawing::Point(165, 64);
+            this->textBox5->Name = L"textBox5";
+            this->textBox5->Size = System::Drawing::Size(544, 29);
+            this->textBox5->TabIndex = 1;
+            // 
+            // textBox4
+            // 
+            this->textBox4->Location = System::Drawing::Point(165, 14);
+            this->textBox4->Name = L"textBox4";
+            this->textBox4->Size = System::Drawing::Size(544, 29);
+            this->textBox4->TabIndex = 0;
+            this->textBox4->Text = L"+ - * ^ A B C D / E + F G";
+            // 
+            // tabPage3
+            // 
+            this->tabPage3->BackColor = System::Drawing::Color::LemonChiffon;
+            this->tabPage3->Controls->Add(this->textBox9);
+            this->tabPage3->Controls->Add(this->textBox8);
+            this->tabPage3->Controls->Add(this->textBox7);
+            this->tabPage3->Controls->Add(this->button6);
+            this->tabPage3->Controls->Add(this->button5);
+            this->tabPage3->Location = System::Drawing::Point(4, 28);
+            this->tabPage3->Name = L"tabPage3";
+            this->tabPage3->Padding = System::Windows::Forms::Padding(3);
+            this->tabPage3->Size = System::Drawing::Size(801, 171);
+            this->tabPage3->TabIndex = 2;
+            this->tabPage3->Text = L"PostFix";
+            // 
+            // textBox9
+            // 
+            this->textBox9->Location = System::Drawing::Point(188, 108);
+            this->textBox9->Name = L"textBox9";
+            this->textBox9->Size = System::Drawing::Size(517, 29);
+            this->textBox9->TabIndex = 4;
+            // 
+            // textBox8
+            // 
+            this->textBox8->Location = System::Drawing::Point(188, 66);
+            this->textBox8->Name = L"textBox8";
+            this->textBox8->Size = System::Drawing::Size(517, 29);
+            this->textBox8->TabIndex = 3;
+            // 
+            // textBox7
+            // 
+            this->textBox7->Location = System::Drawing::Point(188, 17);
+            this->textBox7->Name = L"textBox7";
+            this->textBox7->Size = System::Drawing::Size(517, 29);
+            this->textBox7->TabIndex = 2;
+            this->textBox7->Text = L"A B ^ C * D - E F G + / +";
+            // 
+            // button6
+            // 
+            this->button6->Location = System::Drawing::Point(23, 101);
+            this->button6->Name = L"button6";
+            this->button6->Size = System::Drawing::Size(147, 36);
+            this->button6->TabIndex = 1;
+            this->button6->Text = L"Postfix => Prefix";
+            this->button6->UseVisualStyleBackColor = true;
+            // 
+            // button5
+            // 
+            this->button5->Location = System::Drawing::Point(23, 59);
+            this->button5->Name = L"button5";
+            this->button5->Size = System::Drawing::Size(147, 36);
+            this->button5->TabIndex = 0;
+            this->button5->Text = L"Postfix => Infix";
+            this->button5->UseVisualStyleBackColor = true;
+            // 
+            // checkBox1
+            // 
+            this->checkBox1->AutoSize = true;
+            this->checkBox1->Font = (gcnew System::Drawing::Font(L"新細明體", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(136)));
+            this->checkBox1->ForeColor = System::Drawing::Color::SaddleBrown;
+            this->checkBox1->Location = System::Drawing::Point(59, 227);
+            this->checkBox1->Name = L"checkBox1";
+            this->checkBox1->Size = System::Drawing::Size(121, 22);
+            this->checkBox1->TabIndex = 1;
+            this->checkBox1->Text = L"Print Stack";
+            this->checkBox1->UseVisualStyleBackColor = true;
+            // 
+            // checkBox2
+            // 
+            this->checkBox2->AutoSize = true;
+            this->checkBox2->Font = (gcnew System::Drawing::Font(L"新細明體", 9, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+                static_cast<System::Byte>(136)));
+            this->checkBox2->ForeColor = System::Drawing::Color::SaddleBrown;
+            this->checkBox2->Location = System::Drawing::Point(192, 227);
+            this->checkBox2->Name = L"checkBox2";
+            this->checkBox2->Size = System::Drawing::Size(138, 22);
+            this->checkBox2->TabIndex = 2;
+            this->checkBox2->Text = L"Print Tracing";
+            this->checkBox2->UseVisualStyleBackColor = true;
+            // 
+            // richTextBox3
+            // 
+            this->richTextBox3->Location = System::Drawing::Point(17, 255);
+            this->richTextBox3->Name = L"richTextBox3";
+            this->richTextBox3->Size = System::Drawing::Size(801, 276);
+            this->richTextBox3->TabIndex = 3;
+            this->richTextBox3->Text = L"";
+            // 
+            // MyForm
+            // 
+            this->AutoScaleDimensions = System::Drawing::SizeF(9, 18);
+            this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+            this->BackColor = System::Drawing::Color::MistyRose;
+            this->ClientSize = System::Drawing::Size(833, 543);
+            this->Controls->Add(this->richTextBox3);
+            this->Controls->Add(this->checkBox2);
+            this->Controls->Add(this->checkBox1);
+            this->Controls->Add(this->tabControl1);
+            this->Name = L"MyForm";
+            this->Text = L"MyForm";
+            this->Load += gcnew System::EventHandler(this, &MyForm::MyForm_Load);
+            this->tabControl1->ResumeLayout(false);
+            this->tabPage1->ResumeLayout(false);
+            this->tabPage1->PerformLayout();
+            this->tabPage2->ResumeLayout(false);
+            this->tabPage2->PerformLayout();
+            this->tabPage3->ResumeLayout(false);
+            this->tabPage3->PerformLayout();
+            this->ResumeLayout(false);
+            this->PerformLayout();
+
+        }
+
+        private: System::Void MyForm_Load(System::Object^ sender, System::EventArgs^ e) {
+            button1->Click += gcnew System::EventHandler(this, &MyForm::InfixToPrefixButton_Click);
+            button2->Click += gcnew System::EventHandler(this, &MyForm::InfixToPostfixButton_Click);
+            button3->Click += gcnew System::EventHandler(this, &MyForm::PrefixToInfixButton_Click);
+            button4->Click += gcnew System::EventHandler(this, &MyForm::PrefixToPostfixButton_Click);
+            button5->Click += gcnew System::EventHandler(this, &MyForm::PostfixToInfixButton_Click);
+            button6->Click += gcnew System::EventHandler(this, &MyForm::PostfixToPrefixButton_Click);
+        }
+#pragma endregion
+
+//中前
+private: System::Void InfixToPrefixButton_Click(System::Object^ sender, System::EventArgs^ e) {
+    richTextBox3->Clear();
+    String^ infix = textBox1->Text;
+    textBox2->Text = InfixToPrefix(infix);
+}
+
+ //中後
+private: System::Void InfixToPostfixButton_Click(System::Object^ sender, System::EventArgs^ e) {
+    richTextBox3->Clear();
+    String^ infix = textBox1->Text;
+    textBox3->Text = InfixToPostfix(infix);
+}
+//前中
+private: System::Void PrefixToInfixButton_Click(System::Object^ sender, System::EventArgs^ e) {
+    richTextBox3->Clear();
+     String^ prefix = textBox4->Text;
+    textBox5->Text = PrefixToInfix(prefix);
+}
+//前後
+private: System::Void PrefixToPostfixButton_Click(System::Object^ sender, System::EventArgs^ e) {
+    richTextBox3->Clear();
+    String^ prefix = textBox4->Text;
+    textBox6->Text = PrefixToPostfix(prefix);
+}
+//後中
+private: System::Void PostfixToInfixButton_Click(System::Object^ sender, System::EventArgs^ e) {
+    richTextBox3->Clear();
+    String^ postfix = textBox7->Text;
+    textBox8->Text = PostfixToInfix(postfix);
+}
+
+//後前
+private: System::Void PostfixToPrefixButton_Click(System::Object^ sender, System::EventArgs^ e) {
+    richTextBox3->Clear();
+    String^ postfix = textBox7->Text;
+    textBox9->Text = PostfixToPrefix(postfix);
+}
+
+
+private:
+#pragma endregion
+    
+
+    
+    // 中轉前
+    /*
+    String^ InfixToPrefix(String^ infix) {
+        PrintTracingInfo("開始中轉前: " + infix);
+        String^ reversedInfix = ReverseString(infix);
+        PrintTracingInfo("反轉後: " + reversedInfix);
+        String^ postfix = InfixToPostfix(reversedInfix);
+        String^ prefix = ReverseString(postfix);
+        PrintTracingInfo("最終表達式: " + prefix);
+        return prefix;
+    }
+    */
+    String^ InfixToPrefix(String^ infix) {
+        PrintTracingInfo("【中序轉前序開始】輸入表達式: " + infix);
+
+        // 運算子與運算元堆疊
+        System::Collections::Generic::Stack<wchar_t>^ operators = gcnew System::Collections::Generic::Stack<wchar_t>();
+        System::Collections::Generic::Stack<String^>^ operands = gcnew System::Collections::Generic::Stack<String^>();
+
+        for (int i = infix->Length - 1; i >= 0; i--) {
+            wchar_t ch = infix[i];
+            if (ch == ' ') continue;
+
+            // 如果是右括號，直接放入 operator stack
+            if (ch == ')') {
+                operators->Push(ch);
+                PrintTracingInfo("遇到右括號 ) → 放入 operators");
+                PrintStackContent(operators, "運算子stack");
+            }
+
+            // 如果是左括號，將 operators 堆疊中內容 pop 出來直到遇到 ')'
+            else if (ch == '(') {
+                PrintTracingInfo("遇到左括號 ( → 開始彈出至 )");
+                while (operators->Count > 0 && operators->Peek() != ')') {
+                    wchar_t op = operators->Pop();
+                    String^ op1 = operands->Pop();
+                    String^ op2 = operands->Pop();
+                    String^ exp = op.ToString() + " " + op1 + " " + op2;
+                    operands->Push(exp);
+
+                    PrintTracingInfo("彈出運算子 " + op + "，產生表達式: " + exp);
+                    PrintStackContent(operands, "運算元stack");
+                    PrintStackContent(operators, "運算子stack");
+                }
+                if (operators->Count > 0) {
+                    operators->Pop(); // Pop ')'
+                    PrintTracingInfo("彈出匹配右括號 )");
+                }
+            }
+
+            // 若是運算子（+ - * / ^），根據優先權彈出舊有運算子
+            else if (IsOperator(ch)) {
+                PrintTracingInfo("處理運算子: " + ch);
+                while (operators->Count > 0 && GetPriority(operators->Peek()) > GetPriority(ch)) {
+                    wchar_t op = operators->Pop();
+                    String^ op1 = operands->Pop();
+                    String^ op2 = operands->Pop();
+                    String^ exp = op.ToString() + " " + op1 + " " + op2;
+                    operands->Push(exp);
+
+                    PrintTracingInfo("Pop 優先權更高的運算子 " + op + "，形成子表達式: " + exp);
+                    PrintStackContent(operands, "運算元stack");
+                    PrintStackContent(operators, "運算子stack");
+                }
+                operators->Push(ch);
+                PrintTracingInfo("運算子 " + ch + " 入 stack");
+                PrintStackContent(operators, "運算子stack");
+            }
+
+            // 若是運算元，直接 push 到 operands 堆疊
+            else if (IsOperand(ch)) {
+                operands->Push(ch.ToString());
+                PrintTracingInfo("運算元 " + ch + " 入 operands stack");
+                PrintStackContent(operands, "運算元stack");
+            }
+        }
+
+        // 處理剩下的 operators
+        PrintTracingInfo("處理剩餘運算子");
+        while (operators->Count > 0) {
+            wchar_t op = operators->Pop();
+            String^ op1 = operands->Pop();
+            String^ op2 = operands->Pop();
+            String^ exp = op.ToString() + " " + op1 + " " + op2;
+            operands->Push(exp);
+
+            PrintTracingInfo("彈出運算子 " + op + "，組合成表達式: " + exp);
+            PrintStackContent(operands, "運算元stack");
+            PrintStackContent(operators, "運算子stack");
+        }
+
+        String^ result = operands->Pop();
+        PrintTracingInfo("【轉換完成】Prefix 結果: " + result);
+        return result;
+    }
+
+
+
+    // 中轉後
+    String^ InfixToPostfix(String^ infix) {
+        PrintTracingInfo("開始中轉後: " + infix);
+        System::Collections::Generic::Stack<wchar_t>^ operatorStack = gcnew System::Collections::Generic::Stack<wchar_t>();
+        
+        String^ postfix = "";
+
+        for (int i = 0; i < infix->Length; i++) {
+            wchar_t ch = infix[i];
+            if (ch == ' ') continue;
+
+            if (IsOperand(ch)) {
+                postfix += ch;
+                PrintTracingInfo("運算元 " + ch + " 新增到結果");
+            }
+            else if (ch == '(') {
+                operatorStack->Push(ch);
+                PrintTracingInfo("( 入stack");
+                PrintTracingInfo("運算元stack " + postfix);
+                PrintStackContent(operatorStack, "運算子stack");
+            }
+            else if (ch == ')') {
+                PrintTracingInfo("處理 )");
+                while (operatorStack->Count > 0 && operatorStack->Peek() != '(') {
+                    wchar_t op = operatorStack->Pop();
+                    postfix += op;
+             
+                    PrintTracingInfo("pop運算子 " + op + " 新增到結果");
+                    PrintTracingInfo("運算元stack " + postfix);
+                    PrintStackContent(operatorStack, "運算子stack");
+                }
+                if (operatorStack->Count > 0 && operatorStack->Peek() == '(') {
+                    operatorStack->Pop();
+                    PrintTracingInfo("pop (");
+                    PrintTracingInfo("運算元stack " + postfix);
+                    PrintStackContent(operatorStack, "運算子stack");
+                }
+            }
+            else if (IsOperator(ch)) {
+                PrintTracingInfo("處理運算子 " + ch);
+                while (operatorStack->Count > 0 && operatorStack->Peek() != '(' &&
+                    (GetPriority(operatorStack->Peek()) > GetPriority(ch) ||
+                        (GetPriority(operatorStack->Peek()) == GetPriority(ch) && ch != '^'))) {
+                    wchar_t op = operatorStack->Pop();
+                    postfix += op;
+                    PrintTracingInfo("pop優先級高or同的運算子 " + op + " 新增到結果");
+                    PrintTracingInfo("運算元stack " + postfix);
+                    PrintStackContent(operatorStack, "運算子stack");
+                }
+                operatorStack->Push(ch);
+                PrintTracingInfo("運算子 " + ch + " 入stack");
+                PrintStackContent(operatorStack, "運算子stack");
+                PrintTracingInfo("運算元stack " + postfix);
+            }
+        }
+
+        PrintTracingInfo("處理stack中剩餘的運算子");
+        while (operatorStack->Count > 0) {
+            wchar_t op = operatorStack->Pop();
+            postfix += op;
+            PrintTracingInfo("pop運算子 " + op + " 新增到結果");
+            PrintTracingInfo("運算元stack " + postfix);
+            PrintStackContent(operatorStack, "運算子stack");
+        }
+
+        PrintTracingInfo("轉換結果: " + postfix);
+        return postfix;
+    }
+
+    // 前綴表達式轉中綴表達式
+    String^ PrefixToInfix(String^ prefix) {
+        PrintTracingInfo("開始前轉中: " + prefix);
+        System::Collections::Generic::Stack<String^>^ stack = gcnew System::Collections::Generic::Stack<String^>();
+
+        for (int i = prefix->Length - 1; i >= 0; i--) {
+            wchar_t ch = prefix[i];
+            if (ch == ' ') continue;
+
+            if (IsOperand(ch)) {
+                stack->Push(ch.ToString());
+                PrintTracingInfo("運算元 " + ch + " 入stack");
+                PrintStackContent(stack, "運算元stack");
+            }
+            else if (IsOperator(ch)) {
+                String^ op1 = stack->Pop();
+                String^ op2 = stack->Pop();
+                String^ temp = "(" + op1 + " " + ch + " " + op2 + ")";
+                stack->Push(temp);
+                PrintTracingInfo("構造子表達式 " + temp + " 並入stack");
+                PrintStackContent(stack, "運算元stack");
+            }
+        }
+
+        String^ result = stack->Pop();
+        PrintTracingInfo("轉換結果: " + result);
+        return result;
+    }
+
+    // 前綴表達式轉後綴表達式
+    String^ PrefixToPostfix(String^ prefix) {
+        PrintTracingInfo("開始前轉後: " + prefix);
+        System::Collections::Generic::Stack<String^>^ stack = gcnew System::Collections::Generic::Stack<String^>();
+
+        for (int i = prefix->Length - 1; i >= 0; i--) {
+            wchar_t ch = prefix[i];
+            if (ch == ' ') continue;
+
+            if (IsOperand(ch)) {
+                stack->Push(ch.ToString());
+                PrintTracingInfo("運算元 " + ch + " 入stack");
+                PrintStackContent(stack, "運算元stack");
+            }
+            else if (IsOperator(ch)) {
+                String^ op1 = stack->Pop();
+                String^ op2 = stack->Pop();
+                String^ temp = op1 + op2 + ch;
+                stack->Push(temp);
+                PrintTracingInfo("表達式 " + temp + " 並入stack");
+                PrintStackContent(stack, "運算元stack");
+            }
+        }
+
+        String^ result = stack->Pop();
+        PrintTracingInfo("轉換結果: " + result);
+        return result;
+    }
+
+    // 後綴表達式轉中綴表達式
+    String^ PostfixToInfix(String^ postfix) {
+        PrintTracingInfo("開始後轉中: " + postfix);
+        System::Collections::Generic::Stack<String^>^ stack = gcnew System::Collections::Generic::Stack<String^>();
+
+        for (int i = 0; i < postfix->Length; i++) {
+            wchar_t ch = postfix[i];
+            if (ch == ' ') continue;
+
+            if (IsOperand(ch)) {
+                stack->Push(ch.ToString());
+                PrintTracingInfo("運算元 " + ch + " 入stack");
+                PrintStackContent(stack, "運算元stack");
+            }
+            else if (IsOperator(ch)) {
+                String^ op2 = stack->Pop();
+                String^ op1 = stack->Pop();
+                String^ temp = "(" + op1 + " " + ch + " " + op2 + ")";
+                stack->Push(temp);
+                PrintTracingInfo("表達式 " + temp + " 並入stack");
+                PrintStackContent(stack, "運算元stack");
+            }
+        }
+
+        String^ result = stack->Pop();
+        PrintTracingInfo("轉換結果: " + result);
+        return result;
+    }
+
+    // 後綴表達式轉前綴表達式
+    String^ PostfixToPrefix(String^ postfix) {
+        PrintTracingInfo("開始後轉前: " + postfix);
+        System::Collections::Generic::Stack<String^>^ stack = gcnew System::Collections::Generic::Stack<String^>();
+
+        for (int i = 0; i < postfix->Length; i++) {
+            wchar_t ch = postfix[i];
+            if (ch == ' ') continue;
+
+            if (IsOperand(ch)) {
+                stack->Push(ch.ToString());
+                PrintTracingInfo("運算元 " + ch + " 入stack");
+                PrintStackContent(stack, "運算元stack");
+            }
+            else if (IsOperator(ch)) {
+                String^ op2 = stack->Pop();
+                String^ op1 = stack->Pop();
+                String^ temp = ch + op1 + op2;
+                stack->Push(temp);
+                PrintTracingInfo("表達式 " + temp + " 並入stack");
+                PrintStackContent(stack, "運算元stack");
+            }
+        }
+
+        String^ result = stack->Pop();
+        PrintTracingInfo("轉換結果: " + result);
+        return result;
+    }
+
+    // 字元是否為運算子
+    bool IsOperator(wchar_t c) {
+        return c == '+' || c == '-' || c == '*' || c == '/' || c == '^';
+    }
+
+    // 字元是否為運算元（字母數字）
+    bool IsOperand(wchar_t c) {
+        return (c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') || (c >= '0' && c <= '9');
+    }
+
+    int GetPriority(wchar_t op) {
+        if (op == '^') 
+            return 3;
+        if (op == '*' || op == '/')
+            return 2;
+        if (op == '+' || op == '-') 
+            return 1;
+        return 0;
+    }
+    /*
+    // 反轉
+    String^ ReverseString(String^ str) {
+        array<wchar_t>^ arr = str->ToCharArray();
+        int n = arr->Length;
+        for (int i = 0; i < n / 2; i++) {
+            wchar_t temp = arr[i];
+            arr[i] = arr[n - i - 1];
+            arr[n - i - 1] = temp;
+        };
+
+        // 同步替換左右括號
+        for (int i = 0; i < n; i++) {
+            if (arr[i] == '(') arr[i] = ')';
+            else if (arr[i] == ')') arr[i] = '(';
+        }
+
+        return gcnew String(arr);
+    }
+    */
+
+    void PrintTracingInfo(String^ message) {
+        if (checkBox2->Checked) {
+            richTextBox3->AppendText(message + "\r\n");
+        }
+    }
+
+    // 輸出stack的內容到richbox3
+    void PrintStackContent(System::Collections::Generic::Stack<wchar_t>^ stack, String^ stackName) {
+        if (checkBox1->Checked) {
+            richTextBox3->AppendText(stackName + ": ");
+            array<wchar_t>^ arr = stack->ToArray();
+            for each (wchar_t c in arr) {
+                richTextBox3->AppendText(c.ToString() + " ");
+            }
+            richTextBox3->AppendText("\r\n");
+        }
+    }
+
+    // 列印字串stack的
+    void PrintStackContent(System::Collections::Generic::Stack<String^>^ stack, String^ stackName) {
+        if (checkBox1->Checked) {
+            richTextBox3->AppendText(stackName + ": ");
+            array<String^>^ arr = stack->ToArray();
+            for each (String ^ s in arr) {
+                richTextBox3->AppendText(s + " ");
+            }
+            richTextBox3->AppendText("\r\n");
+        }
+    }
+    
+
+private: System::Void textBox6_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+}
+};
+}
